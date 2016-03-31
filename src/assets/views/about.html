@@ -1,5 +1,5 @@
 <div class="pure-g">
-  <form class="pure-u-1-1 formBackground" action="">
+  <form class="pure-u-1-1 ng-submit="submit()" formBackground" action="">
     <label for="dailyEntry1">Daily Entry</label>
       <input type="text" name="dailyEntry1" ng-model="dailyEntry1"/><br/>
     <label for="dailyEntry2">Name</label>
@@ -8,9 +8,10 @@
       <input type="text" name="dailyEntry3" ng-model="dailyEntry3"/><br/>
   </form>
     <div class="pure-u-1-1 output">
-      <p>{{dailyEntry1}}</p><br/>
-      <p>{{dailyEntry2}}</p><br/>
-      <p>{{dailyEntry3}}</p><br/>
+      <p>{{dailyEntry1}}</p>
+      <p>{{dailyEntry2}}</p>
+      <p>{{dailyEntry3}}</p>
     </div>
   </div>
 <button ng-click="addItem()">add item</button>
+<input type="submit" id="submit" value="Submit" ng-click="submit()" />

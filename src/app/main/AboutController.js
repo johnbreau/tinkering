@@ -7,4 +7,11 @@ angular.module('yeomanTest')
       $scope.addItem = function(){
         alert('hey baby');
       };
+
+      $scope.list = [];
+      $scope.submit = function() {
+        $scope.list.push(this.dailyEntry1);
+        $scope.dailyEntry1 = '';
+        console.log('here is the list', $scope.list);
+      }
 }]);
