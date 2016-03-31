@@ -16,9 +16,9 @@
         controller: 'ContactController'
       })
       .when('/about', {
-        templateUrl: '../assets/views/about.html',
-        controller: 'AboutController',
+        templateUrl: '../assets/views/about.html'
       })
+
       .otherwise({
         redirectTo: '/'
       });

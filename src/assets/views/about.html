@@ -1,12 +1,16 @@
-<div class="pure-g"ng-controller='AboutController'>
+<div class="pure-g">
   <form class="pure-u-1-1 formBackground" action="">
-    <label for="dailyEntry1">{{dailyEntry1}}</label>
-      <input type="text" name="dailyEntry1" ng-model="dailyEntry1"/>
-    <label for="dailyEntry2">{{dailyEntry2}}</label>
-      <input type="text" name="dailyEntry2" ng-model="dailyEntry2"/>
-    <label for="dailyEntry3">{{dailyEntry3}}</label>
-      <input type="text" name="dailyEntry3" ng-model="dailyEntry3"/>
+    <label for="dailyEntry1">Daily Entry</label>
+      <input type="text" name="dailyEntry1" ng-model="dailyEntry1"/><br/>
+    <label for="dailyEntry2">Name</label>
+      <input type="text" name="dailyEntry2" ng-model="dailyEntry2"/><br/>
+    <label for="dailyEntry3">Favorite Baseball Team</label>
+      <input type="text" name="dailyEntry3" ng-model="dailyEntry3"/><br/>
   </form>
+    <div class="pure-u-1-1 output">
+      <p>{{dailyEntry1}}</p><br/>
+      <p>{{dailyEntry2}}</p><br/>
+      <p>{{dailyEntry3}}</p><br/>
+    </div>
   </div>
-
-</div>
+<button ng-click="addItem()">add item</button>
