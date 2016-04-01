@@ -4,6 +4,8 @@ angular.module('yeomanTest')
       this.dailyEntry2 = 'Name';
       this.dailyEntry3 = 'Favorite Baseball Team';
 
+      $scope.test = 'test message';
+
       $scope.addItem = function(){
         alert('hey baby');
       };

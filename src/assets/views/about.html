@@ -1,4 +1,4 @@
-<div class="pure-g">
+<div class="pure-g" ng-controller="AboutController">
   <form class="pure-u-1-1 ng-submit="submit()" formBackground" action="">
     <label for="dailyEntry1">Daily Entry</label>
       <input type="text" name="dailyEntry1" ng-model="dailyEntry1"/><br/>
@@ -12,6 +12,10 @@
       <p>{{dailyEntry2}}</p>
       <p>{{dailyEntry3}}</p>
     </div>
-  </div>
+
 <button ng-click="addItem()">add item</button>
 <input type="submit" id="submit" value="Submit" ng-click="submit()" />
+<br/>
+  <button ng-click="addElement()">Add Element</button>
+  <ng-portlet></ng-portlet>
+</div>
