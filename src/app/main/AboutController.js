@@ -1,19 +1,17 @@
 angular.module('yeomanTest')
   .controller('AboutController', ['$scope', function($scope) {
-      this.dailyEntry1 = 'Daily Entry';
-      this.dailyEntry2 = 'Name';
-      this.dailyEntry3 = 'Favorite Baseball Team';
+      var vm = this;
 
-      $scope.test = 'test message';
+      vm.dailyEntry1 = 'Daily Entry';
+      vm.dailyEntry2 = 'Name';
+      vm.dailyEntry3 = 'Favorite Baseball Team';
 
-      $scope.addItem = function(){
-        alert('hey baby');
-      };
-
-      $scope.list = [];
       $scope.submit = function() {
-        $scope.list.push(this.dailyEntry1);
+        $scope.list = [];
+        $scope.list.push(this.dailyEntry1, this.dailyEntry2, this.dailyEntry3);
         $scope.dailyEntry1 = '';
+        $scope.dailyEntry2 = '';
+        $scope.dailyEntry3 = '';
         console.log('here is the list', $scope.list);
       }
 }]);

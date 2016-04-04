@@ -1,13 +1,14 @@
 angular.module('yeomanTest')
   .directive('aboutdirective', function(){
     return {
-      template: '<div>{{ test }}</div>',
+      restrict: 'EA',
+      controller: "AboutController",
+      controllerAs: "vm",
       restrict: 'E',
-      link: function (scope, elem) {
-        scope.addElement = function(){
-        console.log(elem);
-        elem.after($compile('<ng-portlet></ng-portlet>')(scope));
+      link: function($scope, element, attrs){
+        element.bind('click', function(){
+          alert('thats what its about.');
+        })
       }
-    }
   }
 });
