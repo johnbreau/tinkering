@@ -4,18 +4,10 @@
         restrict: 'EA',
         templateUrl: '../../../assets/views/testdirective.html',
         controller: 'AboutController',
-        link: function(scope, element, attrs){
-            scope = true,
-
+        link: function(scope, element, attrs, controller){
             element.bind('click', function(){
               alert('that is it dude');
             });
-
-            if (scope === true){
-              console.log('scope is true');
-            } else {
-              console.log('scope is false');
-            }
             }
       };
 

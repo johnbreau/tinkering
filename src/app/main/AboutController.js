@@ -2,9 +2,9 @@ angular.module('yeomanTest')
   .controller('AboutController', ['$scope', function($scope) {
       var vm = this;
 
-      vm.customers = [
-        {name: 'Haley'}, {name: 'Ella'}, {name: 'Landon'}, {name: 'John'}
-        ];
+      vm.customers = {
+        name: 'Haley', name: 'Ella', name: 'Landon', name: 'John'
+      };
 
       vm.dailyEntry1 = 'Daily Entry';
       vm.dailyEntry2 = 'Name';
@@ -16,7 +16,6 @@ angular.module('yeomanTest')
         $scope.dailyEntry1 = '';
         $scope.dailyEntry2 = '';
         $scope.dailyEntry3 = '';
-        console.log('here is the list', $scope.list);
       }
 
       $scope.alertItNow = function() {
@@ -24,6 +23,11 @@ angular.module('yeomanTest')
       }
 
       $scope.viewModelTest = function() {
-        console.log(vm.customers[1]);
+        $scope.numbers = [];
+        var yourNumber = prompt('gimme a number');
+        var myNumber = Math.random();
+        var total = myNumber * yourNumber;
+        var roundedTotal = Math.round(total);
+        alert('your total is ' + roundedTotal);
       }
 }]);
